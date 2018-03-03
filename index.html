@@ -9,8 +9,9 @@
   <div id="app" class="container">
     <h1>My Todos</h1>
     <ul>
-      <li v-for="todo in todos">
+      <li v-for="(todo, i) in todos">
         {{ todo }}
+        <span class="command" @click="deleteItem(i)">[x]</span>
       </li>
     </ul>
     <form @submit.prevent="addItem">

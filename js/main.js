@@ -16,6 +16,11 @@
         this.todos.push(this.newItem);
         this.newItem = '';
       },
+      deleteItem(i) {
+        if (confirm('are you sure?')) {
+          this.todos.splice(i, 1);
+        }
+      },
     }
   });
 })();
