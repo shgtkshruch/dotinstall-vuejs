@@ -10,7 +10,7 @@
     <h1>My Todos</h1>
     <ul>
       <li v-for="(todo, i) in todos">
-        {{ todo }}
+        {{ todo.title }}
         <span class="command" @click="deleteItem(i)">[x]</span>
       </li>
     </ul>
