@@ -13,8 +13,8 @@
         {{ todo }}
       </li>
     </ul>
-    <form>
-      <input type="text">
+    <form @submit.prevent="addItem">
+      <input type="text" v-model="newItem">
       <input type="submit" value="Add">
     </form>
   </div>
