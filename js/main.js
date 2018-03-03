@@ -34,6 +34,12 @@
           this.todos.splice(i, 1);
         }
       },
+    },
+    computed: {
+      remaining() {
+        const items = this.todos.filter((todo) => !todo.isDone)
+        return items.length;
+      }
     }
   });
 })();
