@@ -14,6 +14,7 @@
         <span :class="{ done: todo.isDone }">{{ todo.title }}</span>
         <span class="command" @click="deleteItem(i)">[x]</span>
       </li>
+      <li v-show="!todos.length">Nothing todo, yay!</li>
     </ul>
     <form @submit.prevent="addItem">
       <input type="text" v-model="newItem">
