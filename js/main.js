@@ -34,11 +34,16 @@
           this.todos.splice(i, 1);
         }
       },
+      purge() {
+        if (!confirm('delete finished?')) {
+          return;
+        }
+        this.todos = this.remaining;
+      }
     },
     computed: {
       remaining() {
-        const items = this.todos.filter((todo) => !todo.isDone)
-        return items.length;
+        return this.todos.filter(todo => !todo.isDone)
       }
     }
   });
